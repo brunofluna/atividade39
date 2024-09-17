@@ -75,6 +75,7 @@ class ContaCorrente(Conta):
     
     def exibir_menu(self):
         print('\nOPÇÕES\n')
+        print('0 - Consultar Saldo.')
         print('1 - Fazer saque.')
         print('2 - Fazer depósito.')
         print('3 - Sair.')

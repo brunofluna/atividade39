@@ -18,13 +18,14 @@ if __name__ == '__main__':
         opcao = input('Opção desejada: ')
         os.system('cls')
         match opcao:
+            case '0':
+                print('CONSULTAR SALDO\n')
+                print(f'Saldo disponível R$ {cc.consultar_saldo():,.2f}.')
             case '1':
                 valor = str(input('Valor do saque: R$ '))
                 valor = float(valor.replace(',', '.'))
                 if valor < cc.saldo:
-                    cc.saldo = cc.sacar_valorgit init
-                    git add .
-                    
+                    cc.saldo = cc.fazer_saque(valor)
                     print('Saque efetuado!')
                     print(f'Saldo atual: {cc.saldo:,.2f} ')
                 else:
